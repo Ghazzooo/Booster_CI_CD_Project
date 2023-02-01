@@ -24,6 +24,6 @@ jobs:
         
         - name: Run tests
           run: |
-                docker build . -f Dockerfile -t ${{secrets.myuser}}/iti_lab2:v1
+                docker build .  Dockerfile -t ${{secrets.myuser}}/iti_lab2:v1
                 docker login -u ${{secrets.myuser}} -p ${{secrets.mypass}}
                 docker push ghazooo/iti_lab2:v1
